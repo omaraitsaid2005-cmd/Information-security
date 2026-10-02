@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fingerprinting Lab</title>
+</head>
+<body>
+    <h1>Mission: Find Alice without cookies</h1>
+
+    <h2>Active Feature Collection</h2>
+    <div id="feature-output">
+        Waiting for JavaScript...
+    </div>
+        <h2>The Typing Imposter</h2>
+    <p>Type the following sentence exactly:</p>
+    <p id="target-sentence">Cookies are gone, but Alice's rhythm still leaves traces!</p>
+
+    <input type="text" id="typing-input" size="70" placeholder="Start typing here..."
+           autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    <button id="restart-btn">Restart the experiment</button>
+
+    <div id="typing-results">
+        <p>Total typing time: <span id="result-time"></span></p>
+        <p>Typing speed: <span id="result-speed"></span></p>
+        <p>Number of corrections (Backspace): <span id="result-corrections"></span></p>
+    </div>
+    <script src="{{ url_for('static', filename='fingerprint.js') }}"></script>
+        <script src="{{ url_for('static', filename='fingerprint2.js') }}"></script>
+</body>
+</html>
